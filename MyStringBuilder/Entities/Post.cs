@@ -2,26 +2,14 @@
 
 namespace MyStringBuilder.Entities
 {
-    public class Post
+    public class Post(DateTime moment, string title, string content, int likes)
     {
-        public DateTime Moment { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public int Likes { get; set; }
+        public DateTime Moment { get; set; } = moment;
+        public string Title { get; set; } = title;
+        public string Content { get; set; } = content;
+        public int Likes { get; set; } = likes;
 
         public List<Comment> comments { get; set; } = new List<Comment>();
-
-        public Post()
-        {
-        }
-
-        public Post(DateTime moment, string title, string content, int likes)
-        {
-            Moment = moment;
-            Title = title;
-            Content = content;
-            Likes = likes;
-        }
 
         public void AddComment(Comment comment)
         {
