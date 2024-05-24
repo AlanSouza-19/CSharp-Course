@@ -8,7 +8,7 @@ public class Client
     public string Name { get; set; }
     public string Email { get; set; }
     public DateTime BirthDate { get; set; }
-    public Order Order { get; set; }
+    public Order Order { get; set; } // Em um sistema real talvez o melhor seria cada cliente ter uma lista de ordem
 
     public Client(string name, string email, DateTime birthDate, Order order)
     {
