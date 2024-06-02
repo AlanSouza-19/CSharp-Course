@@ -17,14 +17,15 @@ class Program
             char response = char.Parse(Console.ReadLine() ?? "");
             bool isOutsourced = response == 'y';
 
+            Console.Write("Name: ");
+            string name = Console.ReadLine() ?? "";
+            Console.Write("Hours: ");
+            int hours = int.Parse(Console.ReadLine() ?? "");
+            Console.Write("Value per hour: ");
+            double valuePerHour = double.Parse(Console.ReadLine() ?? "", CultureInfo.InvariantCulture);
+
             if (isOutsourced)
             {
-                Console.Write("Name: ");
-                string name = Console.ReadLine() ?? "";
-                Console.Write("Hours: ");
-                int hours = int.Parse(Console.ReadLine() ?? "");
-                Console.Write("Value per hour: ");
-                double valuePerHour = double.Parse(Console.ReadLine() ?? "", CultureInfo.InvariantCulture);
                 Console.Write("Addicional charge: ");
                 double addicionalCharge = double.Parse(Console.ReadLine() ?? "", CultureInfo.InvariantCulture);
 
@@ -36,13 +37,6 @@ class Program
                 ));
 
             } else {
-                Console.Write("Name: ");
-                string name = Console.ReadLine() ?? "";
-                Console.Write("Hours: ");
-                int hours = int.Parse(Console.ReadLine() ?? "");
-                Console.Write("Value per hour: ");
-                double valuePerHour = double.Parse(Console.ReadLine() ?? "", CultureInfo.InvariantCulture);
-
                 employees.Add(new Employee(
                     name,
                     hours,
