@@ -9,7 +9,7 @@ class Program
         List<Product> products = [];
 
         Console.Write("Enter the number of products: ");
-        int numberOfProducs = int.Parse(Console.ReadLine());
+        int numberOfProducs = int.Parse(Console.ReadLine() ?? "");
 
         for (int i = 1; i <= numberOfProducs; i++ )
         {
