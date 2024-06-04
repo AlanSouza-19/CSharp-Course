@@ -17,8 +17,9 @@ public class ImportedProduct : Product
     {
         StringBuilder sb = new ();
 
-        sb.Append(Name);
+        sb.Append($"{Name} ");
         sb.Append((Price+CustomFee).ToString("F2", CultureInfo.InvariantCulture));
+        sb.Append(' ');
         sb.Append($"(Customs fee: R$ {Price.ToString("F2", CultureInfo.InvariantCulture)})");
 
         return sb.ToString();

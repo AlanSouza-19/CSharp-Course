@@ -18,9 +18,8 @@ public class Product
     {
         StringBuilder sb = new ();
 
-        sb.Append(Name);
-        sb.Append(" R$ ");
-        sb.Append(Price.ToString("F2", CultureInfo.InstalledUICulture));
+        sb.Append($"{Name} ");
+        sb.Append($" R$ {Price.ToString("F2", CultureInfo.InvariantCulture)}");
 
         return sb.ToString();
     }

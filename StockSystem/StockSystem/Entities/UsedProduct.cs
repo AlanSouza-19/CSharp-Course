@@ -16,8 +16,9 @@ public class UsedProduct : Product
     {
         StringBuilder sb = new ();
 
-        sb.Append($"Name (used)");
+        sb.Append($"{Name} (used) ");
         sb.Append(Price.ToString("F2", CultureInfo.InvariantCulture));
+        sb.Append(' ');
         sb.Append($"(Manufacture date: {ManufactureDate.ToString("dd/MM/yyyy")})");
 
         return sb.ToString();
